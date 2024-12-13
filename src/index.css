@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #111729 url('./assets/bg-illustration.svg') no-repeat top right;
+  background-position: 20rem 6rem;
+  overflow: hidden;
+}
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 5rem;
+  height: 100vh;
+  margin: 0;
+  width: 100%;
+  
+}
+
+input {
+  width: 80%;
+  height: 3rem;
+  background: #00030ca1;
+  border: 2px solid #3662E3;
+  border-radius: 10px;
+  color: white;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+.logo-container {
+ background: url('./assets/logo-qr-generator.svg') no-repeat top center;
+ width: 100%;
+ height: 36%;
+ margin-bottom: 1rem;
+}
+
+.input-container {
+  width: 100%;
+  min-width: 500px;
+  position: absolute;
+}
+
+.input-button {
+  background-color: #3662E3;
+  transform: translateY(-50%);
+  width: 7rem;
+  height: 2.3rem;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  position: absolute;
+  top: 50%;
+  right: 11%;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+
+.logo-container-output {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.logo-container-output img {
+  width: 100px;
+  height: auto;
+}
+
+
+.output-container {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.circle {
+  width: 229px;
+  height: 229px;
+  aspect-ratio: 1;
+  background-color: #4e80ee33;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.buttons-container {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons-container button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3662E3;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.buttons-container button:hover {
+  background-color: #3a63c5;
+}
+
+.qrCode-container {
+  background-color: white;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.qrCode {
+  width: auto;
+  height: auto;
+}
+
+.circle-contianer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
