@@ -4,7 +4,7 @@ body {
   background: #111729 url('./assets/bg-illustration.svg') no-repeat top right;
   background-position: 7rem 6rem;
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 
@@ -109,7 +109,7 @@ input {
 
 .buttons-container {
   display: flex;
-  gap: 10px;
+  gap: 1rem;
 }
 
 .buttons-container button {
@@ -148,4 +148,14 @@ input {
   justify-content: center;
 }
 
+.fa-download {
+  color: #3243d6;
+  font-size: 42px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 8));
+  transition: transform ease-in-out;
+  cursor: pointer;
+}
 
+i:hover, i:active {
+  transform: scale(1.1);
+}
