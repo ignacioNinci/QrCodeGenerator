@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import logo from '../assets/logo-qr-generator.svg';
-import toast, { Toaster } from 'react-hot-toast';
+import { notifyError, notifySuccess } from '../shared/ToastMessage';
 
 interface MainInputProps {
     onShowQr: () => void,
@@ -13,21 +13,14 @@ export const MainInput: React.FC<MainInputProps> = ({ onShowQr, onUrlChange }): 
 
     const handleGenerateCode = () => {
         if (url === '') {
-            notify();
+            notifyError('Ingrese URL');
             return;
         }
         onUrlChange(url);
         onShowQr();
+        notifySuccess('Código generado exitosamente!');
     }
 
-    const notify = () => {
-        toast.error('Ingrese URL', {
-            style: {
-                fontFamily: 'Outfit'
-            },
-            position: 'top-right'
-        });
-    }
 
 
   return (
@@ -37,11 +30,15 @@ export const MainInput: React.FC<MainInputProps> = ({ onShowQr, onUrlChange }): 
                 <img src={logo} alt="" />
             </div>
             <div className='input-container'>
-                <input type="text" placeholder='Enter an url' onChange={ e => setUrl(e.currentTarget.value) } />
+                <input 
+                    type="text" 
+                    placeholder='Enter an url' 
+                    onChange={ e => setUrl(e.currentTarget.value) }
+                    onKeyDown={e => e.key === 'Enter' && handleGenerateCode()} 
+                />
                 <button className='input-button' onClick={ handleGenerateCode }>
                     QR code
                 </button>
-                <Toaster />
             </div>
         </section>
     </>

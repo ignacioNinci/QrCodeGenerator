@@ -3,6 +3,7 @@ import './App.css'
 import './index.css';
 import { MainInput } from './components/MainInput';
 import { QrGenerator } from './components/QrGenerator';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -12,6 +13,8 @@ function App() {
 
   return (
     <>
+      <Toaster />
+
       {
         showQr ? 
         ( <QrGenerator onBackMain={ () => setShowQr(false) } 
